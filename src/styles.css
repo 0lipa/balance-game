@@ -64,6 +64,26 @@ input {
   padding: 24px 20px 40px;
 }
 
+/* 1024px 이상 넓은 화면(데스크탑)에서는 화면 높이에 맞춰 카드처럼 보이게 */
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+  }
+  .app-shell {
+    width: 100%;
+    height: min(90vh, 900px);
+    min-height: 0;
+    margin: 0;
+    border-radius: 32px;
+    box-shadow: 0 24px 70px rgba(74, 68, 88, 0.22);
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+
 /* ---------- floating background blobs ---------- */
 .blob {
   position: absolute;
@@ -264,19 +284,9 @@ input {
   white-space: pre-line;
 }
 
-/* ---------- NICKNAME ---------- */
-.nickname-screen {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 18px;
-  position: relative;
-  z-index: 1;
-}
-.nickname-input {
+/* ---------- INPUTS (nickname, password, name lookup selects) ---------- */
+.input-box {
+  display: block;
   width: 100%;
   padding: 16px 18px;
   border-radius: var(--radius-md);
@@ -285,8 +295,12 @@ input {
   text-align: center;
   outline: none;
   background: var(--white);
+  font-family: 'Gowun Dodum', sans-serif;
+  color: var(--ink);
+  appearance: none;
+  -webkit-appearance: none;
 }
-.nickname-input:focus {
+.input-box:focus {
   border-color: var(--pink-deep);
 }
 
