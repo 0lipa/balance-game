@@ -2,6 +2,9 @@
 // 밸런스게임 결과는 회식 자리 배정에는 영향을 주지 않아요 (재미용).
 // text 안의 \n은 줄바꿈으로 렌더링돼요 (styles.css의 white-space: pre-line).
 
+// GitHub Pages 등 하위 경로 배포 시에도 이미지가 깨지지 않도록 BASE_URL을 붙여줌
+const IMG_BASE = import.meta.env.BASE_URL
+
 export const questions = [
   {
     id: 'q1',
@@ -9,12 +12,12 @@ export const questions = [
     optionA: {
       text: '속마음이 바로 튀어나오는 버릇\n생각하는 대로 바로 입밖으로 튀어나옴',
       emoji: '🗣️💭',
-      image: '/images/q1-blurt.jpg',
+      image: `${IMG_BASE}images/q1-blurt.jpg`,
     },
     optionB: {
       text: '스트레스 받으면 소리지르는 버릇\n조금 힘들다 싶으면 벌떡 일어나 창문 열고 소리지름',
       emoji: '😤🪟',
-      image: '/images/q1-scream.jpg',
+      image: `${IMG_BASE}images/q1-scream.jpg`,
     },
   },
   {
@@ -23,13 +26,13 @@ export const questions = [
     optionA: {
       text: '형광 모히칸 염색 스타일\n자리에서 엄청 돌아다녀서 움직일 때마다 머리 끝이 파티션 너머로 보임',
       emoji: '💇🌈',
-      image: '/images/q2-mohawk.jpg',
+      image: `${IMG_BASE}images/q2-mohawk.jpg`,
       imagePosition: 'center 15%',
     },
     optionB: {
       text: '흥 오르면 일어나 댄스 추는 동료\n하루 랜덤 1~10회, 예측불가하게 등장',
       emoji: '🕺❓',
-      image: '/images/q2-dance.jpg',
+      image: `${IMG_BASE}images/q2-dance.jpg`,
       imagePosition: 'center',
     },
   },
@@ -53,13 +56,13 @@ export const questions = [
     optionA: {
       text: '의견 차이 생길 때마다 글러브 던지며\n"스파링해서 이긴 사람 의견으로" 하자는 용채님',
       emoji: '🥊🧤',
-      image: '/images/q4-yongchae-boxing.jpg',
+      image: `${IMG_BASE}images/q4-yongchae-boxing.jpg`,
       imagePosition: 'center',
     },
     optionB: {
       text: '매일 아침 차를 내려주시는 민형님\n거절하면 찻잔 들고 누가 받아줄 때까지 시무룩하게 서 있음',
       emoji: '☕😔',
-      image: '/images/q4-minhyung-wait.png',
+      image: `${IMG_BASE}images/q4-minhyung-wait.png`,
       imagePosition: 'center',
     },
   },
@@ -84,13 +87,13 @@ export const questions = [
     optionA: {
       text: '환승연애\n전 애인 다 잊었다고 했는데 사실 너무 재회하고 싶어서 나감',
       emoji: '🔁💌',
-      image: '/images/q6-hwanseung.jpg',
+      image: `${IMG_BASE}images/q6-hwanseung.jpg`,
       imagePosition: 'center',
     },
     optionB: {
       text: '모태솔로지만 연애가 하고 싶어\n전 애인도 없으면서 전 애인 욕하고 비모태솔로 코스프레 했음',
       emoji: '🎭🙅',
-      image: '/images/q6-motae.jpg',
+      image: `${IMG_BASE}images/q6-motae.jpg`,
       imagePosition: 'center',
     },
   },
